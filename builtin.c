@@ -116,7 +116,10 @@ void shb_cd(char **args)
  */
 void sighandle(int sign)
 {
-	if (sign == SIGINT)
-		write(STDOUT_FILENO, "\n$ ", 3);
+if (sign == SIGINT)
+{
+write(STDOUT_FILENO, "\n$ ", 3);
+exit(0);
+}
 }
 
